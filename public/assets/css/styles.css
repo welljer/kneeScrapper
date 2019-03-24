@@ -1,0 +1,37 @@
+/* nav */
+.navbar{
+    background-color: deeppink;
+}
+.nav-link{
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+/* jumbotron */
+.jumbotron{
+    background-image: url(../image/fishBowl.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: red;
+}
+
+h1, h2, h3, p{
+    font-family: 'ZCOOL KuaiLe', cursive; 
+    text-align: center
+}
+
+h1 p{
+    color: red;
+}
+
+/* not jumbo */
+
+.container-fluid{
+    background-color: crimson;
+}
