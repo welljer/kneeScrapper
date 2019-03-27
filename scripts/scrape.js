@@ -1,20 +1,21 @@
 "use strict";
 
-var request = require("request");
+var axios = require("axios");
 var cheerio = require("cheerio");
 
 var scrape = function (cb) {
-    request("http://www.thrashermagazine.com/", function (err, res, html) {
+    axios("http://www.thrashermagazine.com/")  
+    .then((html) => {
         var $ = cheerio.load(html);
         var articles = [];
-// var junkDrawer = $('.page-content-container');
-// console.log(junkDrawer);
+        var junkDrawer = $('.page-content-container');
+        console.log(html);
 
         $(".page-content-container").each(function (html) {
             var head = $(this).children(".page-content").text().trim();
             console.log(head);
-            // var sum = $(this).children(".post-list").text().trim();
-            // console.log(sum);
+            var sum = $(this).children(".post-list").text().trim();
+            console.log(sum);
             if (head && sum){
                 var headNeat = head.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
                 var sumNeat = sum.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();

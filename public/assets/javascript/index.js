@@ -80,6 +80,7 @@ $(document).ready(function() {
     }
 
     function handleArticleScrape() {
+        console.log("handleArticleScrape")
         $.get("/api/fetch")
         .then(function(data) {
             initPage();

@@ -6,6 +6,7 @@ var Headline = require("../models/HeadlineSchema");
 
 module.exports = {
     fetch: function(cb) {
+        console.log("fetch")
         scrape(function(data) {
                 var articles = data;
                 for (var i=0; i<articles.length; i++) {
